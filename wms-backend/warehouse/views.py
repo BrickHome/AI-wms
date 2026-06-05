@@ -37,7 +37,7 @@ class InventoryViewSet(viewsets.ModelViewSet):
         low_stock_count = Product.objects.filter(
             id__in=Inventory.objects.values('product').annotate(
                 total=Sum('quantity')
-            ).filter(total__lt=models.F('product__min_stock')).values('product')
+            ).filter(total__lt=F('product__min_stock')).values('product')
         ).count()
         return Response({
             'total_inventory': total_inventory,

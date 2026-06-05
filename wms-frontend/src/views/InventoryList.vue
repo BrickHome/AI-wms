@@ -15,7 +15,7 @@
           </template>
         </el-input>
         <el-button type="warning" @click="openAdjustModal">
-          <RefreshCw /> 库存调整
+          <Refresh /> 库存调整
         </el-button>
       </div>
       <el-table :data="inventories" border>
@@ -75,7 +75,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import { Search, RefreshCw } from '@element-plus/icons-vue'
+import { Search, Refresh } from '@element-plus/icons-vue'
 import axios from 'axios'
 
 const inventories = ref([])

@@ -6,23 +6,23 @@
       </div>
       <el-menu :default-active="$route.path" class="menu" router>
         <el-menu-item path="/">
-          <el-icon><Dashboard /></el-icon>
+          <el-icon><DataBoard /></el-icon>
           <span>首页仪表盘</span>
         </el-menu-item>
         <el-sub-menu index="warehouse">
           <template #title>
-            <el-icon><Building /></el-icon>
+            <el-icon><OfficeBuilding /></el-icon>
             <span>仓库管理</span>
           </template>
           <el-menu-item path="/warehouses">仓库列表</el-menu-item>
           <el-menu-item path="/locations">库位管理</el-menu-item>
         </el-sub-menu>
         <el-menu-item path="/products">
-          <el-icon><Package /></el-icon>
+          <el-icon><Box /></el-icon>
           <span>商品管理</span>
         </el-menu-item>
         <el-menu-item path="/inventories">
-          <el-icon><Storage /></el-icon>
+          <el-icon><Folder /></el-icon>
           <span>库存管理</span>
         </el-menu-item>
         <el-sub-menu index="order">
@@ -35,7 +35,7 @@
         </el-sub-menu>
         <el-sub-menu index="partner">
           <template #title>
-            <el-icon><Users /></el-icon>
+            <el-icon><User /></el-icon>
             <span>合作伙伴</span>
           </template>
           <el-menu-item path="/suppliers">供应商</el-menu-item>
@@ -63,8 +63,8 @@
 import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { 
-  Dashboard, Building, Package, Storage, 
-  ShoppingCart, Users 
+  DataBoard, OfficeBuilding, Box, Folder, 
+  ShoppingCart, User 
 } from '@element-plus/icons-vue'
 
 const route = useRoute()

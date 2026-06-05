@@ -4,7 +4,7 @@
       <el-col :span="6">
         <el-card class="stat-card">
           <div class="stat-icon warehouse">
-            <Building />
+            <OfficeBuilding />
           </div>
           <div class="stat-info">
             <div class="stat-value">{{ overview.total_warehouses }}</div>
@@ -26,7 +26,7 @@
       <el-col :span="6">
         <el-card class="stat-card">
           <div class="stat-icon product">
-            <Package />
+            <Box />
           </div>
           <div class="stat-info">
             <div class="stat-value">{{ overview.total_products }}</div>
@@ -37,7 +37,7 @@
       <el-col :span="6">
         <el-card class="stat-card">
           <div class="stat-icon inventory">
-            <Storage />
+            <Folder />
           </div>
           <div class="stat-info">
             <div class="stat-value">{{ overview.total_inventory }}</div>
@@ -120,7 +120,7 @@
             <Plus /> 创建出库单
           </el-button>
           <el-button type="warning" style="margin-bottom: 10px;">
-            <RefreshCw /> 库存盘点
+            <Refresh /> 库存盘点
           </el-button>
         </el-card>
       </el-col>
@@ -131,8 +131,9 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { 
-  Building, MapLocation, Package, Storage, 
-  User, Users, Clock, Calendar, Plus, RefreshCw 
+  OfficeBuilding, MapLocation, Box, Folder, 
+  User, Users, Clock, Calendar, Plus, Refresh,
+  DataBoard 
 } from '@element-plus/icons-vue'
 import axios from 'axios'
 
